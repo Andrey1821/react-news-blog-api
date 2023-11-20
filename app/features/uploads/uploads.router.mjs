@@ -7,7 +7,7 @@ import multer from 'multer';
 
 const router = new Router();
 
-const upload = multer({ dest: 'uploads/images' })
+const upload = multer({ dest: 'uploaded-files/images' })
 
 const reqImageField = 'image';
 

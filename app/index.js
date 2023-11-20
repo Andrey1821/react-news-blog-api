@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import createSeeds from './seeds.mjs';
 import { config } from 'dotenv';
 import { Routes } from './core/routes.mjs';
-import Router from './routes/index.mjs';
+import Router from './features/index.mjs';
 config();
 
 const PORT = process.env.PORT || 5000;
