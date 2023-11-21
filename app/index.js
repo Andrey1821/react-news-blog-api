@@ -3,7 +3,9 @@ import mongoose from 'mongoose';
 import createSeeds from './seeds.mjs';
 import { config } from 'dotenv';
 import { Routes } from './core/routes.mjs';
+import cors from 'cors';
 import Router from './features/index.mjs';
+
 config();
 
 const PORT = process.env.PORT || 5000;
@@ -11,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
-
+app.use(cors());
 app.use(Routes.api, Router);
 
 const start = async () => {
